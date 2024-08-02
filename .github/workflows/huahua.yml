@@ -3,4 +3,6 @@ on: push
 jobs:
   runs-on: ubuntu-latest
   steps:
-    - run: npm run dev
+    - uses: actions/checkout@v4
+    - run: npm install
+    - run: npm run build
